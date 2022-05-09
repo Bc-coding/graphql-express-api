@@ -1,12 +1,14 @@
 import { graphql, GraphQLObjectType, GraphQLSchema } from "graphql";
 
-import getCurrentPersonQuery from "./queries/getCurrentPersonQuery";
+import getPersonQuery from "./queries/getPersonQuery";
+import getAllPersonsQuery from "./queries/getAllPersonsQuery";
 
 const schema = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: "Rootquery",
     fields: () => ({
-      ...getCurrentPersonQuery,
+      ...getPersonQuery,
+      ...getAllPersonsQuery,
     }), // return an object
   }),
 });

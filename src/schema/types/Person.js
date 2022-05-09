@@ -1,8 +1,8 @@
 import { GraphQLObjectType, GraphQLString, GraphQLList } from "graphql";
 
-export const CurrentPerson = new GraphQLObjectType({
-  name: "getCurrentPerson",
-  description: "details of the person who has currently logged in",
+export const Person = new GraphQLObjectType({
+  name: "getPerson",
+  description: "details of a specific person",
   fields: () => ({
     id: { type: GraphQLString },
     name: { type: GraphQLString },

@@ -1,16 +1,16 @@
 import { GraphQLNonNull, GraphQLString } from "graphql";
-import { CurrentPerson } from "../types/CurrentPerson";
+import { Person } from "../types/Person";
 import { fakeDatabase } from "../../FakeDatabase";
 
 export default {
-  currentPerson: {
-    type: CurrentPerson,
+  person: {
+    type: Person,
     description: "Get details of the current person",
     args: {
       id: { type: new GraphQLNonNull(GraphQLString) },
     },
     resolve: function (parent, { id }) {
-      return fakeDatabase.getCurrentPerson(id);
+      return fakeDatabase.getPerson(id);
     },
   },
 };

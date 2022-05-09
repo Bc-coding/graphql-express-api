@@ -28,11 +28,16 @@ class FakeDatabase {
   // ------------------------------------------------------------
   //                      READ METHODS
   // ------------------------------------------------------------
-  getCurrentPerson(id) {
+  getPerson(id) {
     // Here you would make a db connection + query + return data
     return this.persons.filter((person) => {
       return person.id === id;
     })[0];
+  }
+
+  getAllPersons() {
+    // Here you would make a db connection + query + return data
+    return this.persons;
   }
 
   // ------------------------------------------------------------
