@@ -2,6 +2,7 @@ import { graphql, GraphQLObjectType, GraphQLSchema } from "graphql";
 
 import getPersonQuery from "./queries/getPersonQuery";
 import getAllPersonsQuery from "./queries/getAllPersonsQuery";
+import registerPersonMutation from "./mutation/registerPersonMutation";
 
 const schema = new GraphQLSchema({
   query: new GraphQLObjectType({
@@ -10,6 +11,12 @@ const schema = new GraphQLSchema({
       ...getPersonQuery,
       ...getAllPersonsQuery,
     }), // return an object
+  }),
+  mutation: new GraphQLObjectType({
+    name: "Rootmutation",
+    fields: () => ({
+      ...registerPersonMutation,
+    }),
   }),
 });
 

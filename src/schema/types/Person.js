@@ -1,4 +1,9 @@
-import { GraphQLObjectType, GraphQLString, GraphQLList } from "graphql";
+import {
+  GraphQLObjectType,
+  GraphQLString,
+  GraphQLList,
+  GraphQLInputObjectType,
+} from "graphql";
 
 export const Person = new GraphQLObjectType({
   name: "getPerson",
@@ -7,7 +12,15 @@ export const Person = new GraphQLObjectType({
     id: { type: GraphQLString },
     name: { type: GraphQLString },
     email: { type: GraphQLString },
-    phone_number: { type: GraphQLString },
     api_token: { type: GraphQLString },
   }),
+});
+
+// INPUT OBJECT TYPE
+export const PersonInputType = new GraphQLInputObjectType({
+  name: "personInput",
+  fields: {
+    name: { type: GraphQLString },
+    email: { type: GraphQLString },
+  },
 });

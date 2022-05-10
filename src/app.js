@@ -14,6 +14,6 @@ app.use(
 );
 
 // Listening to our server
-app.listen(8000, () =>
-  console.log("GraphQL server is running on localhost:8000/graghql")
+app.listen(4000, () =>
+  console.log("GraphQL server is running on localhost:4000/graghql")
 );

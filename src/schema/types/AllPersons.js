@@ -7,7 +7,6 @@ export const AllPersons = new GraphQLObjectType({
     id: { type: GraphQLString },
     name: { type: GraphQLString },
     email: { type: GraphQLString },
-    phone_number: { type: GraphQLString },
     api_token: { type: GraphQLString },
   }),
 });
